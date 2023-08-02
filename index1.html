@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Sala</title>
+</head>
+<body>
+    <h1>Informe o nome e a idade da criança:</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required><br>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" required><br>
+        <input type="button" value="Verificar" onclick="verificarSala()">
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        function verificarSala() {
+            const nome = document.getElementById('nome').value;
+            const idade = parseInt(document.getElementById('idade').value);
+            let sala;
+
+            if (idade >= 0 && idade <= 2) {
+                sala = 5;
+            } else if (idade >= 3 && idade <= 5) {
+                sala = 10;
+            } else if (idade >= 6 && idade <= 8) {
+                sala = 15;
+            } else if (idade >= 9 && idade <= 10) {
+                sala = 20;
+            } else {               
+                sala = "N/A";
+            }
+
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = `Olá ${nome}, sua idade é ${idade} anos. Você deve entrar na sala ${sala}.`;
+        }
+    </script>
+</body>
+</html>

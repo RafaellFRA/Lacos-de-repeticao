@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+        <h2>insira 5 nomes quaisquer:</h2>
+        <form>
+            <iabel for="name1">Name 1:</iabel>
+            <input type="name" id="name1"
+            name="name1"><br><br>
+
+            <label for="num2">Número 2:</label>
+  <input type="name" id="name2" name="name2"><br><br>
+
+  <label for="name3">Name 3:</label>
+  <input type="name" id="name3" name="name3"><br><br>
+
+  <label for="name4">Name 4:</label>
+  <input type="name" id="name4" name="name4"><br><br>
+
+  <label for="name5">Name 5:</label>
+  <input type="name" id="name5" name="name5"><br><br>
+
+  <input type="submit" value="Enviar">
+</form>
+
+<script>
+let i = 1;
+while (i <= 5) {
+  let num = prompt("Insira o nome " + i + ":");
+  document.getElementById("name" + i).value = num;
+  i++;
+}
+</script>
+
+    
+</body>
+</html>

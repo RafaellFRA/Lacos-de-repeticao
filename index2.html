@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurante Cardápio</title>
+</head>
+<body>
+  <h1>Cardápio do Restaurante</h1>
+
+  <form id="orderForm">
+    <label for="dish">Escolha o prato:</label>
+    <select id="dish" name="dish">
+      <option value="19.00">Virada Paulista - R$ 19.00</option>
+      <option value="21.00">Bife a Cavalo - R$ 21.00</option>
+      <option value="17.00">Calabresa - R$ 17.00</option>
+      <option value="18.00">Frango com Fritas - R$ 18.00</option>
+      <option value="25.00">Feijoada - R$ 25.00</option>
+    </select>
+
+    <p>Deseja adicionar uma bebida por R$ 5.00?</p>
+    <input type="radio" id="yes" name="beverage" value="5.00">
+    <label for="yes">Sim</label>
+    <input type="radio" id="no" name="beverage" value="0.00" checked>
+    <label for="no">Não</label>
+
+    <br>
+    <button type="button" onclick="calculateTotal()">Calcular</button>
+  </form>
+
+  <p id="totalCost"></p>
+
+  <script>
+    function calculateTotal() {
+      const selectedDish = parseFloat(document.getElementById("dish").value);
+      const beverageCost = parseFloat(document.querySelector('input[name="beverage"]:checked').value);
+      const totalCost = selectedDish + beverageCost;
+      document.getElementById("totalCost").innerText = `Valor total: R$ ${totalCost.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>

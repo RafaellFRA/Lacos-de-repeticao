@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Números Pares</title>
+</head>
+<body>
+    <script>
+        // Função para imprimir números pares entre 0 e 100
+        function imprimirNumerosPares() {
+            let output = '';
+            for (let i = 50; i <= 100; i += 2) {
+                output += i + ' ';
+            }
+            document.getElementById('resultado').textContent = output;
+        }
+    </script>   
+
+    <h1>Números Pares entre 50 e 100:</h1>
+    <p id="resultado"></p>
+
+    <!-- Chame a função para imprimir os números pares ao carregar a página -->
+    <script>
+        imprimirNumerosPares();
+    </script>
+</body>
+</html>
